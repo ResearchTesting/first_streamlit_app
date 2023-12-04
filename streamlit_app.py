@@ -39,7 +39,6 @@ try:
     streamlit.error('Please select fruit to get information.')
   else:
     back_from_function = get_fruityvice_data(fruit_choice)
-    fruits_selected = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Avocado', 'Strawberries'])
     streamlit.dataframe(back_from_function)
 except URLError as e:
   streamlit.error()
